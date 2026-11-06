@@ -1,0 +1,42 @@
+name: Refresh permit data
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # every day, 05:17 UTC
+  workflow_dispatch:        # lets you run it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+
+      - name: Install
+        run: pip install -r pipeline/requirements.txt pytest
+
+      - name: Tests (offline, no network)
+        run: python -m pytest -q
+
+      - name: Fetch permits from city portals
+        env:
+          # Optional free token from the portal (raises rate limits). Safe to leave unset.
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+          PIPELINE_USER_AGENT: "PermitTracker/1.0 (+https://github.com/${{ github.repository }})"
+        run: python -m pipeline.run
+
+      # If the step above fails (no city worked), the job turns red and GitHub emails you.
+      - name: Commit refreshed data
+        run: |
+          git config user.name "permit-tracker-bot"
+          git config user.email "permit-tracker-bot@users.noreply.github.com"
+          git add public/data
+          git diff --cached --quiet || (git commit -m "chore: refresh permit data" && git push)

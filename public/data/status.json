@@ -1,0 +1,76 @@
+{
+  "mode": "sample",
+  "generated_at": "2026-11-06T07:58:58Z",
+  "window_days": 60,
+  "totals": {
+    "permits": 600,
+    "with_coordinates": 578,
+    "with_value": 600,
+    "with_contractor": 507
+  },
+  "cities": [
+    {
+      "key": "chicago",
+      "name": "Chicago",
+      "state": "IL",
+      "source_url": "https://data.cityofchicago.org/d/ydr8-5enu",
+      "window_days": 60,
+      "fetched": 260,
+      "kept": 260,
+      "dropped": {},
+      "warnings": {},
+      "duplicates": 0,
+      "date_field": null,
+      "status": "demo",
+      "error": null,
+      "latest_date": "2026-11-06",
+      "coverage": {
+        "coordinates": 0.969,
+        "value": 1.0,
+        "contractor": 0.865
+      }
+    },
+    {
+      "key": "seattle",
+      "name": "Seattle",
+      "state": "WA",
+      "source_url": "https://cos-data.seattle.gov/d/76t5-zqzr",
+      "window_days": 60,
+      "fetched": 190,
+      "kept": 190,
+      "dropped": {},
+      "warnings": {},
+      "duplicates": 0,
+      "date_field": null,
+      "status": "demo",
+      "error": null,
+      "latest_date": "2026-11-06",
+      "coverage": {
+        "coordinates": 0.958,
+        "value": 1.0,
+        "contractor": 0.805
+      }
+    },
+    {
+      "key": "san-francisco",
+      "name": "San Francisco",
+      "state": "CA",
+      "source_url": "https://data.sfgov.org/d/i98e-djp9",
+      "window_days": 60,
+      "fetched": 150,
+      "kept": 150,
+      "dropped": {},
+      "warnings": {},
+      "duplicates": 0,
+      "date_field": null,
+      "status": "demo",
+      "error": null,
+      "latest_date": "2026-11-06",
+      "coverage": {
+        "coordinates": 0.96,
+        "value": 1.0,
+        "contractor": 0.86
+      }
+    }
+  ]
+}
