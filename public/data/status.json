@@ -1,11 +1,11 @@
 {
   "mode": "live",
-  "generated_at": "2026-11-07T11:46:52Z",
+  "generated_at": "2026-11-08T11:58:34Z",
   "window_days": 60,
   "totals": {
-    "permits": 2911,
-    "with_coordinates": 2897,
-    "with_value": 2697,
+    "permits": 2904,
+    "with_coordinates": 2885,
+    "with_value": 2698,
     "with_contractor": 1049
   },
   "cities": [
@@ -23,10 +23,10 @@
       "status": "ok",
       "error": null,
       "kept": 1000,
-      "latest_date": "2026-11-05",
+      "latest_date": "2026-11-06",
       "coverage": {
-        "coordinates": 0.987,
-        "value": 0.795,
+        "coordinates": 0.984,
+        "value": 0.803,
         "contractor": 0.979
       }
     },
@@ -44,9 +44,9 @@
       "status": "ok",
       "error": null,
       "kept": 1000,
-      "latest_date": "2026-11-05",
+      "latest_date": "2026-11-06",
       "coverage": {
-        "coordinates": 0.999,
+        "coordinates": 0.998,
         "value": 0.991,
         "contractor": 0.07
       }
@@ -60,14 +60,14 @@
       "fetched": 1000,
       "dropped": {},
       "warnings": {},
-      "duplicates": 89,
+      "duplicates": 96,
       "date_field": "issued_date",
       "status": "ok",
       "error": null,
-      "kept": 911,
-      "latest_date": "2026-11-05",
+      "kept": 904,
+      "latest_date": "2026-11-06",
       "coverage": {
-        "coordinates": 1.0,
+        "coordinates": 0.999,
         "value": 1.0,
         "contractor": 0.0
       }
