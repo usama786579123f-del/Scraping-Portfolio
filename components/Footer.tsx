@@ -38,13 +38,23 @@ export function AboutContact() {
           <p className="mt-2 text-sm text-ink-muted">
             Have a project in mind? Tell me what data you need and I’ll reply with an approach and a quote.
           </p>
-          {site.phone && (
-            <a href={`tel:${site.phone}`} className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-ink hover:text-brand">
-              <Phone size={15} /> {site.phone}
-            </a>
-          )}
+          <p className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-semibold text-ink">
+            <span className="inline-flex items-center gap-2">
+              <Mail size={15} /> {site.email}
+            </span>
+            {site.phone && (
+              <a href={`tel:${site.phone}`} className="inline-flex items-center gap-2 hover:text-brand">
+                <Phone size={15} /> {site.phone}
+              </a>
+            )}
+          </p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
-            <a href={`mailto:${site.email}`} className="btn-primary">
+            <a
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(site.email)}&su=${encodeURIComponent("Project inquiry")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
               <Send size={16} /> Send Message
             </a>
             {socials.map(({ icon: Icon, href, label }) => (
