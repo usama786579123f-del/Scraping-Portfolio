@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, Database } from "lucide-react";
+import { ArrowRight, Mail, Database, Phone, MessageCircle } from "lucide-react";
 import { site } from "@/site.config";
 
 export default function Hero() {
@@ -34,6 +34,22 @@ export default function Hero() {
               <Mail size={16} /> Hire Me
             </a>
           </div>
+
+          {site.phone && (
+            <p className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-ink-muted">
+              <a href={`tel:${site.phone}`} className="inline-flex items-center gap-1.5 font-semibold text-ink hover:text-brand">
+                <Phone size={15} /> {site.phone}
+              </a>
+              <a
+                href={`https://wa.me/${site.phone.replace(/\D/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-semibold text-ink hover:text-brand"
+              >
+                <MessageCircle size={15} /> WhatsApp
+              </a>
+            </p>
+          )}
         </div>
 
         {/* Portrait + floating cards */}
@@ -70,41 +86,6 @@ class Spider(scrapy.Spider):
               <div className="text-sm font-bold text-ink leading-tight">Public Data</div>
               <div className="text-[10px] text-ink-muted">100% compliant scraping</div>
             </div>
-          </div>
-
-          {/* price trend */}
-          <div className="absolute -right-1 top-6 w-36 rounded-xl bg-white p-3 shadow-float sm:-right-6 sm:w-40">
-            <div className="text-[10px] font-semibold text-ink">Price Trend</div>
-            <div className="text-[10px] font-semibold text-emerald-500">↑ +24%</div>
-            <svg viewBox="0 0 100 40" className="mt-1 h-10 w-full">
-              <polyline
-                points="0,34 15,28 28,31 42,20 56,24 70,12 85,16 100,4"
-                fill="none"
-                stroke="#4F46E5"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-
-          {/* data preview */}
-          <div className="absolute -right-1 bottom-10 w-40 rounded-xl bg-white p-3 shadow-float sm:-right-6 sm:w-44">
-            <div className="mb-1.5 text-[10px] font-semibold text-ink">Data Preview</div>
-            <table className="w-full font-mono text-[9px] text-ink-muted">
-              <thead>
-                <tr className="text-left text-ink">
-                  <th className="font-semibold">id</th>
-                  <th className="font-semibold">price</th>
-                  <th className="font-semibold">date</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><td>101</td><td>$24.5</td><td>01-01</td></tr>
-                <tr><td>102</td><td>$27.9</td><td>01-02</td></tr>
-                <tr><td>103</td><td>$26.8</td><td>01-03</td></tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </div>
