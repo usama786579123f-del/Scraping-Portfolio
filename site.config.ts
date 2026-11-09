@@ -11,8 +11,8 @@ export const site = {
   photoAbout: "/me-about.png", // About Me wale gol frame ki photo
   // Live project links. Khali chhorein to card "Coming soon" dikhayega.
   projectLinks: {
-    riskChecker: "", // Risk Checker ka Vercel link
-    reviewSniper: "https://reviewsniper-3f3r.vercel.app/dashboard",
+    riskChecker: "https://risk-checker-peach.vercel.app/",
+    reviewSniper: "https://reviewsniper-3f3r.vercel.app",
   },
   links: {
     linkedin: "https://www.linkedin.com/in/usama-ibrahim-33b73b403",
