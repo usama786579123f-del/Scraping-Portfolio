@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Send, Twitter, Youtube } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, Send, Twitter, Youtube } from "lucide-react";
 import { Logo } from "./Navbar";
 import { site } from "@/site.config";
 
@@ -8,7 +8,7 @@ export function AboutContact() {
     { icon: Github, href: site.links.github, label: "GitHub" },
     { icon: Youtube, href: site.links.youtube, label: "YouTube" },
     { icon: Twitter, href: site.links.x, label: "X" },
-  ];
+  ].filter((s) => s.href);
 
   return (
     <section id="contact" className="mx-auto max-w-6xl scroll-mt-20 px-5 pb-20">
@@ -17,7 +17,7 @@ export function AboutContact() {
         <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
           <div className="h-44 w-44 shrink-0 overflow-hidden rounded-full border-4 border-brand/15 bg-gradient-to-b from-brand/20 to-brand/5 shadow-card">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={site.photo} alt={site.name} className="h-full w-full object-cover object-top" />
+            <img src={site.photoAbout ?? site.photo} alt={site.name} className="h-full w-full object-cover object-top" />
           </div>
           <div>
             <span className="section-label">About Me</span>
@@ -38,6 +38,11 @@ export function AboutContact() {
           <p className="mt-2 text-sm text-ink-muted">
             Have a project in mind? Tell me what data you need and I’ll reply with an approach and a quote.
           </p>
+          {site.phone && (
+            <a href={`tel:${site.phone}`} className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-ink hover:text-brand">
+              <Phone size={15} /> {site.phone}
+            </a>
+          )}
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <a href={`mailto:${site.email}`} className="btn-primary">
               <Send size={16} /> Send Message
