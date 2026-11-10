@@ -1,12 +1,12 @@
 {
   "mode": "live",
-  "generated_at": "2026-11-09T13:59:07Z",
+  "generated_at": "2026-11-10T13:31:51Z",
   "window_days": 60,
   "totals": {
-    "permits": 2903,
-    "with_coordinates": 2884,
-    "with_value": 2699,
-    "with_contractor": 1049
+    "permits": 2883,
+    "with_coordinates": 2864,
+    "with_value": 2679,
+    "with_contractor": 1047
   },
   "cities": [
     {
@@ -36,19 +36,19 @@
       "state": "WA",
       "source_url": "https://cos-data.seattle.gov/d/76t5-zqzr",
       "window_days": 60,
-      "fetched": 999,
+      "fetched": 979,
       "dropped": {},
       "warnings": {},
       "duplicates": 0,
       "date_field": "issueddate",
       "status": "ok",
       "error": null,
-      "kept": 999,
+      "kept": 979,
       "latest_date": "2026-11-07",
       "coverage": {
         "coordinates": 0.998,
         "value": 0.991,
-        "contractor": 0.07
+        "contractor": 0.069
       }
     },
     {
