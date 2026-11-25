@@ -1,12 +1,12 @@
 {
   "mode": "live",
-  "generated_at": "2026-11-24T15:57:21Z",
+  "generated_at": "2026-11-25T15:43:04Z",
   "window_days": 60,
   "totals": {
-    "permits": 2849,
-    "with_coordinates": 2838,
-    "with_value": 2710,
-    "with_contractor": 1042
+    "permits": 2865,
+    "with_coordinates": 2855,
+    "with_value": 2734,
+    "with_contractor": 1045
   },
   "cities": [
     {
@@ -23,11 +23,11 @@
       "status": "ok",
       "error": null,
       "kept": 1000,
-      "latest_date": "2026-11-23",
+      "latest_date": "2026-11-24",
       "coverage": {
-        "coordinates": 0.993,
-        "value": 0.867,
-        "contractor": 0.982
+        "coordinates": 0.994,
+        "value": 0.875,
+        "contractor": 0.985
       }
     },
     {
@@ -36,15 +36,15 @@
       "state": "WA",
       "source_url": "https://cos-data.seattle.gov/d/76t5-zqzr",
       "window_days": 60,
-      "fetched": 950,
+      "fetched": 959,
       "dropped": {},
       "warnings": {},
       "duplicates": 0,
       "date_field": "issueddate",
       "status": "ok",
       "error": null,
-      "kept": 950,
-      "latest_date": "2026-11-20",
+      "kept": 959,
+      "latest_date": "2026-11-23",
       "coverage": {
         "coordinates": 0.998,
         "value": 0.994,
@@ -60,12 +60,12 @@
       "fetched": 1000,
       "dropped": {},
       "warnings": {},
-      "duplicates": 101,
+      "duplicates": 94,
       "date_field": "issued_date",
       "status": "ok",
       "error": null,
-      "kept": 899,
-      "latest_date": "2026-11-23",
+      "kept": 906,
+      "latest_date": "2026-11-24",
       "coverage": {
         "coordinates": 0.998,
         "value": 1.0,
